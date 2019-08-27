@@ -1,0 +1,381 @@
+@import url("../fonts/Montserrat/Montserrat.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body nav.main-nav {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 40px;
+  height: 70px;
+  -webkit-box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  position: relative;
+}
+
+body nav.main-nav div.nav-logo {
+  margin-right: auto;
+}
+
+body nav.main-nav div.nav-logo img {
+  height: 48px;
+}
+
+body nav.main-nav div.nav-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body nav.main-nav div.nav-item-container div.nav-item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body nav.main-nav div.nav-item-container div.nav-item a.nav-link {
+  display: block;
+  line-height: 70px;
+  color: #000;
+  text-decoration: none;
+  padding-right: 30px;
+  font-size: 18px;
+}
+
+body nav.main-nav div.nav-item-container div.nav-item a.nav-link:hover {
+  color: #3b3b3b;
+}
+
+body nav.main-nav div.nav-item-container div.nav-item a.nav-link.active {
+  background-color: #FFC928;
+  -webkit-clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
+          clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
+  padding: 0 46px;
+  font-weight: bold;
+  color: #fff;
+}
+
+body nav.main-nav div.hamburger {
+  cursor: pointer;
+  width: 44px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 1;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body nav.main-nav div.hamburger div.hamburger-bar-1 {
+  width: 100%;
+  height: 4px;
+  background-color: #FFC928;
+}
+
+body nav.main-nav div.hamburger div.hamburger-bar-2 {
+  width: 30px;
+  height: 4px;
+  background-color: #FFC928;
+  margin-top: 12px;
+}
+
+body nav.main-nav.show-drawer div.nav-drawer-outer {
+  visibility: visible;
+}
+
+body nav.main-nav.show-drawer div.nav-drawer-outer div.nav-drawer {
+  right: 0;
+}
+
+body nav.main-nav.show-drawer div.hamburger div.hamburger-bar-1 {
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body nav.main-nav.show-drawer div.hamburger div.hamburger-bar-2 {
+  width: 100%;
+  margin-top: 0;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body nav.main-nav div.nav-drawer-outer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+}
+
+body nav.main-nav div.nav-drawer-outer .nav-drawer-holder {
+  width: calc(100% - 320px);
+  height: 100vh;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer {
+  position: absolute;
+  display: block;
+  width: 320px;
+  top: 0;
+  right: -320px;
+  height: 100vh;
+  background-color: #fff;
+  -webkit-box-shadow: -4px 0 60px rgba(0, 0, 0, 0.3);
+          box-shadow: -4px 0 60px rgba(0, 0, 0, 0.3);
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner {
+  margin-top: 96px;
+  height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link {
+  padding: 0 40px 0 66px;
+  display: block;
+  line-height: 40px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link.active, body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link:hover {
+  background-color: #FFC928;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link.sub-parent::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f053";
+  position: absolute;
+  left: 34px;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link.sub-parent.open-sub::before {
+  content: "\f054";
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub {
+  position: absolute;
+  min-width: 290px;
+  right: 360px;
+  top: 110px;
+  background-color: #fff;
+  padding: 30px 0;
+  visibility: hidden;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub.show-sub {
+  visibility: visible;
+  opacity: 1;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link {
+  color: #000;
+  line-height: 36px;
+  font-size: 14px;
+  padding: 0 30px;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link.active, body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link:hover {
+  background-color: #FFC928;
+}
+
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub::before {
+  content: "";
+  border-left: 24px solid #fff;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  position: absolute;
+  right: -24px;
+  top: 0;
+}
+
+body div.main-content {
+  height: calc(100vh - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  min-height: 538px;
+}
+
+body div.main-content div.bg-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: center/cover no-repeat url("../images/dam-4260531_1920.jpg");
+  -webkit-filter: brightness(60%) hue-rotate(-25deg);
+          filter: brightness(60%) hue-rotate(-25deg);
+  z-index: -1;
+}
+
+body div.main-content div.bg-image.fade {
+  opacity: 0;
+}
+
+body div.main-content div.big-dialog, body div.main-content div.dialog {
+  max-width: 1054px;
+}
+
+body div.main-content div.big-dialog {
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body div.main-content div.big-dialog p.dialog-content {
+  margin: 0;
+  font-weight: 500;
+  font-size: 48px;
+  color: #fff;
+}
+
+body div.main-content div.big-dialog p.dialog-content span.regular-highlight {
+  color: #FFC928;
+}
+
+body div.main-content div.big-dialog::before, body div.main-content div.big-dialog::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 98px;
+  background-color: #FFC928;
+  -webkit-clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
+          clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
+}
+
+body div.main-content div.big-dialog::before {
+  margin-left: auto;
+  margin-bottom: 16px;
+}
+
+body div.main-content div.big-dialog::after {
+  margin-top: 16px;
+}
+
+body div.main-content div.dialog h1.title {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 59px;
+  color: #FFC928;
+}
+
+body div.main-content div.dialog div.dialog-content {
+  color: #fff;
+  font-size: 18px;
+}
+
+body div.main-content div.dialog div.dialog-content.cols-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc(50% - 10px))[2];
+      grid-template-columns: repeat(2, calc(50% - 10px));
+  grid-column-gap: 20px;
+}
+
+body div.main-content div.dialog div.dialog-content.cols-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc(calc(100% / 3) - calc(40px / 3)))[3];
+      grid-template-columns: repeat(3, calc(calc(100% / 3) - calc(40px / 3)));
+  grid-column-gap: 20px;
+}
+
+body div.main-content div.dialog div.dialog-content h2.sub-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+body div.main-content div.dialog div.dialog-content ul {
+  padding-left: 18px;
+}
+
+body div.main-content div.dialog div.dialog-content ul li {
+  line-height: 28px;
+}
+
+body div.main-content div.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  position: absolute;
+  bottom: 50px;
+}
+
+body div.main-content div.slider div.slider-bar {
+  height: 6px;
+  background-color: rgba(155, 155, 155, 0.49);
+  width: 100%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+body div.main-content div.slider div.slider-bar.active {
+  background-color: rgba(255, 201, 40, 0.72);
+  width: 142px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+/*# sourceMappingURL=style.css.map */

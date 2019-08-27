@@ -1,0 +1,340 @@
+@import url("../fonts/Montserrat/Montserrat.css");
+
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease-in;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    nav.main-nav {
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+        height: 70px;
+        box-shadow: 0px 5px 6px rgba(0,0,0,0.2);
+        z-index: 9999;
+        position: relative;
+
+        div.nav-logo {
+            margin-right: auto;
+
+            img {
+                height: 48px;
+            }
+        }
+
+        div.nav-item-container {
+            display: flex;
+
+            div.nav-item {
+                flex-shrink: 0;
+
+                a.nav-link {
+                    display: block;
+                    line-height: 70px;
+                    color: #000;
+                    text-decoration: none;
+                    padding-right: 30px;
+                    font-size: 18px;
+    
+                    &:hover {
+                        color: #3b3b3b;
+                    }
+    
+                    &.active {
+                        background-color: #FFC928;
+                        clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
+                        padding: 0 46px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        div.hamburger {
+            cursor: pointer;
+            width: 44px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 1;
+            position: relative;
+            flex-shrink: 0;
+
+            div.hamburger-bar-1 {
+                width: 100%;
+                height: 4px;
+                background-color: #FFC928;
+            }
+
+            div.hamburger-bar-2 {
+                width: 30px;
+                height: 4px;
+                background-color: #FFC928;
+                margin-top: 12px;
+            }
+        }
+
+        &.show-drawer {
+            div.nav-drawer-outer {
+                visibility: visible;
+
+                div.nav-drawer {
+                    right: 0;
+                }
+            }
+
+            div.hamburger {
+                div.hamburger-bar-1 {
+                    position: absolute;
+                    transform: rotate(-45deg);
+                }
+
+                div.hamburger-bar-2 {
+                    width: 100%;
+                    margin-top: 0;
+                    position: absolute;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        div.nav-drawer-outer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            visibility: hidden;
+
+            .nav-drawer-holder {
+                width: calc(100% - 320px);
+                height: 100vh;
+            }
+
+            div.nav-drawer {
+                position: absolute;
+                display: block;
+                width: 320px;
+                top: 0;
+                right: -320px;
+                height: 100vh;
+                background-color: #fff;
+                box-shadow: -4px 0 60px rgba(0,0,0,0.3);
+    
+                .nav-drawer-inner {
+                    margin-top: 96px;
+                    height: calc(100vh - 96px);
+                    overflow-y: auto;
+    
+                    div.nav-item {
+                        a.nav-link {
+                            padding: 0 40px 0 66px;
+                            display: block;
+                            line-height: 40px;
+                            position: relative;
+                            color: #000;
+                            text-decoration: none;
+                            font-size: 18px;
+                            font-weight: 500;
+    
+                            &.active, &:hover {
+                                background-color: #FFC928;
+                            }
+    
+                            &.sub-parent::before {
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                font-style: normal;
+                                font-variant: normal;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                                content: "\f053";
+                                position: absolute;
+                                left: 34px;
+                            }
+
+                            &.sub-parent.open-sub::before {
+                                content: "\f054";
+                            }
+                        }
+    
+                        div.sub {
+                            position: absolute;
+                            min-width: 290px;
+                            right: 360px;
+                            top: 110px;
+                            background-color: #fff;
+                            padding: 30px 0;
+                            visibility: hidden;
+                            opacity: 0;
+                            white-space: nowrap;
+
+                            &.show-sub {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                            
+                            a.nav-link {
+                                color: #000;
+                                line-height: 36px;
+                                font-size: 14px;
+                                padding: 0 30px;
+    
+                                &.active, &:hover {
+                                    background-color: #FFC928;
+                                }
+                            }
+    
+                            &::before {
+                                content: "";
+                                border-left: 24px solid #fff;
+                                border-top: 24px solid transparent;
+                                border-bottom: 24px solid transparent;
+                                position: absolute;
+                                right: -24px;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.main-content {
+        height: calc(100vh - 70px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-height: 538px;
+
+        div.bg-image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: center / cover no-repeat url("../images/dam-4260531_1920.jpg");
+            filter: brightness(60%) hue-rotate(-25deg);
+            z-index: -1;
+
+            &.fade {
+                opacity: 0;
+            }
+        }
+
+        div.big-dialog, div.dialog {
+            max-width: 1054px;
+        }
+
+        div.big-dialog {
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            p.dialog-content {
+                margin: 0;
+                font-weight: 500;
+                font-size: 48px;
+                color: #fff;
+
+                span.regular-highlight {
+                    color: #FFC928;
+                }
+            }
+
+            &::before, &::after {
+                content: "";
+                display: block;
+                width: 150px;
+                height: 98px;
+                background-color: #FFC928;
+                clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
+            }
+
+            &::before {
+                margin-left: auto;
+                margin-bottom: 16px;
+            }
+
+            &::after {
+                margin-top: 16px;
+            }
+        }
+
+        div.dialog {
+            h1.title {
+                font-size: 48px;
+                font-weight: 500;
+                line-height: 59px;
+                color: #FFC928;
+            }
+
+            div.dialog-content {
+                color: #fff;
+                font-size: 18px;
+
+                &.cols-2 {
+                    display: grid;
+                    grid-template-columns: repeat(2, calc(50% - 10px));
+                    grid-column-gap: 20px;
+                }
+
+                &.cols-3 {
+                    display: grid;
+                    grid-template-columns: repeat(3, calc(calc(100% / 3) - calc(40px / 3)));
+                    grid-column-gap: 20px;
+                }
+
+                h2.sub-title {
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 29px;
+                }
+
+                ul {
+                    padding-left: 18px;
+
+                    li {
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+
+        div.slider {
+            display: flex;
+            width: 400px;
+            position: absolute;
+            bottom: 50px;
+    
+            div.slider-bar {
+                height: 6px;
+                background-color: rgba(155, 155, 155, 0.49);
+                width: 100%;
+                margin: 0 4px;
+                cursor: pointer;
+
+                &.active {
+                    background-color: rgba(255, 201, 40, 0.72);
+                    width: 142px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+}
