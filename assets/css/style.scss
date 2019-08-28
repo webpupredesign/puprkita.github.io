@@ -35,24 +35,21 @@ body {
             div.nav-item {
                 flex-shrink: 0;
 
-                a.nav-link {
+                a.nav-link-custom {
                     display: block;
                     line-height: 70px;
-                    color: #000;
+                    color: #6e6e6e;
                     text-decoration: none;
                     padding-right: 30px;
                     font-size: 18px;
     
                     &:hover {
-                        color: #3b3b3b;
+                        color: #000;
                     }
     
                     &.active {
-                        background-color: #FFC928;
-                        clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
-                        padding: 0 46px;
                         font-weight: bold;
-                        color: #fff;
+                        color: #000;
                     }
                 }
             }
@@ -138,7 +135,7 @@ body {
                     overflow-y: auto;
     
                     div.nav-item {
-                        a.nav-link {
+                        a.nav-link-custom {
                             padding: 0 40px 0 66px;
                             display: block;
                             line-height: 40px;
@@ -185,7 +182,7 @@ body {
                                 opacity: 1;
                             }
                             
-                            a.nav-link {
+                            a.nav-link-custom {
                                 color: #000;
                                 line-height: 36px;
                                 font-size: 14px;
@@ -212,7 +209,30 @@ body {
         }
     }
 
-    div.main-content {
+    .slider-bar-container {
+        display: flex;
+        width: 400px !important;
+        position: absolute;
+        bottom: 24px;
+        margin: 0 auto;
+
+        .slider-bar {
+            height: 6px;
+            background-color: rgba(155, 155, 155, 0.49);
+            width: 100%;
+            margin: 0 4px;
+            cursor: pointer;
+            transition: all .5s ease-in !important;
+
+            &.active {
+                background-color: rgba(255, 201, 40, 0.72);
+                width: 142px;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    div.slider-content {
         height: calc(100vh - 70px);
         display: flex;
         flex-direction: column;
@@ -282,6 +302,7 @@ body {
                 font-weight: 500;
                 line-height: 59px;
                 color: #FFC928;
+                margin: 20px 0;
             }
 
             div.dialog-content {
@@ -312,27 +333,6 @@ body {
                     li {
                         line-height: 28px;
                     }
-                }
-            }
-        }
-
-        div.slider {
-            display: flex;
-            width: 400px;
-            position: absolute;
-            bottom: 50px;
-    
-            div.slider-bar {
-                height: 6px;
-                background-color: rgba(155, 155, 155, 0.49);
-                width: 100%;
-                margin: 0 4px;
-                cursor: pointer;
-
-                &.active {
-                    background-color: rgba(255, 201, 40, 0.72);
-                    width: 142px;
-                    flex-shrink: 0;
                 }
             }
         }

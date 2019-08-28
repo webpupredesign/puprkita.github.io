@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +24,13 @@
     <script src="./assets/js/main-nav.js"></script>
 
     <!-- slider.js -->
-    <script src="./assets/js/slider.js"></script>
+    <!-- <script src="./assets/js/slider.js"></script> -->
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <nav class="main-nav" id="main-nav">
         <div class="nav-logo">
@@ -32,16 +38,16 @@
         </div>
         <div class="nav-item-container">
             <div class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link-custom active" href="#">Home</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="#">Berita</a>
+                <a class="nav-link-custom" href="#">Berita</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="#">Galeri</a>
+                <a class="nav-link-custom" href="#">Galeri</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="#">Pengumuman</a>
+                <a class="nav-link-custom" href="#">Pengumuman</a>
             </div>
         </div>
 
@@ -51,79 +57,81 @@
             <div class="nav-drawer">
                 <div class="nav-drawer-inner">
                     <div class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link sub-parent">Profil</a>
-        
+                        <a href="javascript:void(0)" class="nav-link-custom sub-parent">Profil</a>
+
                         <div class="sub">
-                            <a href="#" class="nav-link">Visi dan Misi</a>
-                            <a href="#" class="nav-link">Sejarah</a>
-                            <a href="#" class="nav-link">Tugas dan Fungsi</a>
-                            <a href="#" class="nav-link">Struktur Organisasi</a>
-                            <a href="#" class="nav-link">Motto dan Lambang</a>
-                            <a href="#" class="nav-link">Informasi Pejabat</a>
-                            <a href="#" class="nav-link">Profil Pejabat</a>
-                            <a href="#" class="nav-link">Lokasi dan Kontak</a>
-                            <a href="#" class="nav-link">Iprove</a>
+                            <a href="#" class="nav-link-custom">Visi dan Misi</a>
+                            <a href="#" class="nav-link-custom">Sejarah</a>
+                            <a href="#" class="nav-link-custom">Tugas dan Fungsi</a>
+                            <a href="#" class="nav-link-custom">Struktur Organisasi</a>
+                            <a href="#" class="nav-link-custom">Motto dan Lambang</a>
+                            <a href="#" class="nav-link-custom">Informasi Pejabat</a>
+                            <a href="#" class="nav-link-custom">Profil Pejabat</a>
+                            <a href="#" class="nav-link-custom">Lokasi dan Kontak</a>
+                            <a href="#" class="nav-link-custom">Iprove</a>
                         </div>
                     </div>
 
                     <div class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link sub-parent">Organisasi</a>
+                        <a href="javascript:void(0)" class="nav-link-custom sub-parent">Organisasi</a>
 
                         <div class="sub">
-                            <a href="#" class="nav-link">Sekretariat Jendral</a>
-                            <a href="#" class="nav-link">Inspektorat Jendral</a>
-                            <a href="#" class="nav-link">Direktorat Jendral Sumber Daya Air</a>
-                            <a href="#" class="nav-link">Direktorat Jendral Bina Marga</a>
-                            <a href="#" class="nav-link">Direktorat Jendral Cipta Karya</a>
-                            <a href="#" class="nav-link">Direktorat Jendral Penyediaan Perumahan</a>
-                            <a href="#" class="nav-link">Direktorat Jendral Bina Konstruksi</a>
-                            <a href="#" class="nav-link">Direktorat Jendral Pembiayaan Infrastruktur Pekerjaan Umum dan Perumahan</a>
-                            <a href="#" class="nav-link">Badan Pengembangan Infrastruktur Wilayah</a>
-                            <a href="#" class="nav-link">Badan Penelitian Pengembangan</a>
-                            <a href="#" class="nav-link">Badan Pengembangan SDM</a>
-                            <a href="#" class="nav-link">Badan Pengatur Jalan Tol</a>
-                            <a href="#" class="nav-link">Badan Peningkatan Penyelenggaraan Sistem Penyediaan Air Minum</a>
+                            <a href="#" class="nav-link-custom">Sekretariat Jendral</a>
+                            <a href="#" class="nav-link-custom">Inspektorat Jendral</a>
+                            <a href="#" class="nav-link-custom">Direktorat Jendral Sumber Daya Air</a>
+                            <a href="#" class="nav-link-custom">Direktorat Jendral Bina Marga</a>
+                            <a href="#" class="nav-link-custom">Direktorat Jendral Cipta Karya</a>
+                            <a href="#" class="nav-link-custom">Direktorat Jendral Penyediaan Perumahan</a>
+                            <a href="#" class="nav-link-custom">Direktorat Jendral Bina Konstruksi</a>
+                            <a href="#" class="nav-link-custom">Direktorat Jendral Pembiayaan Infrastruktur Pekerjaan Umum dan
+                                Perumahan</a>
+                            <a href="#" class="nav-link-custom">Badan Pengembangan Infrastruktur Wilayah</a>
+                            <a href="#" class="nav-link-custom">Badan Penelitian Pengembangan</a>
+                            <a href="#" class="nav-link-custom">Badan Pengembangan SDM</a>
+                            <a href="#" class="nav-link-custom">Badan Pengatur Jalan Tol</a>
+                            <a href="#" class="nav-link-custom">Badan Peningkatan Penyelenggaraan Sistem Penyediaan Air
+                                Minum</a>
                         </div>
                     </div>
 
                     <div class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link sub-parent">Produk</a>
+                        <a href="javascript:void(0)" class="nav-link-custom sub-parent">Produk</a>
 
                         <div class="sub">
-                            <a href="#" class="nav-link">Informasi Anggaran Kementrian PUPR</a>
-                            <a href="#" class="nav-link">Renstra 2015-2019</a>
-                            <a href="#" class="nav-link">Kebijakan / Peraturan</a>
-                            <a href="#" class="nav-link">Standar Nasional</a>
-                            <a href="#" class="nav-link">E-Government Kementrian PUPR</a>
+                            <a href="#" class="nav-link-custom">Informasi Anggaran Kementrian PUPR</a>
+                            <a href="#" class="nav-link-custom">Renstra 2015-2019</a>
+                            <a href="#" class="nav-link-custom">Kebijakan / Peraturan</a>
+                            <a href="#" class="nav-link-custom">Standar Nasional</a>
+                            <a href="#" class="nav-link-custom">E-Government Kementrian PUPR</a>
                         </div>
                     </div>
 
                     <div class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link sub-parent">Informasi Publik</a>
+                        <a href="javascript:void(0)" class="nav-link-custom sub-parent">Informasi Publik</a>
 
                         <div class="sub">
-                            <a href="#" class="nav-link">Profil PPID Kementrian PUPR</a>
-                            <a href="#" class="nav-link">Dasar Hukum</a>
-                            <a href="#" class="nav-link">Daftar Informasi Publik</a>
-                            <a href="#" class="nav-link">Rencana Pengadaan</a>
-                            <a href="#" class="nav-link">E-PPID</a>
-                            <a href="#" class="nav-link">Permintaan Informasi</a>
+                            <a href="#" class="nav-link-custom">Profil PPID Kementrian PUPR</a>
+                            <a href="#" class="nav-link-custom">Dasar Hukum</a>
+                            <a href="#" class="nav-link-custom">Daftar Informasi Publik</a>
+                            <a href="#" class="nav-link-custom">Rencana Pengadaan</a>
+                            <a href="#" class="nav-link-custom">E-PPID</a>
+                            <a href="#" class="nav-link-custom">Permintaan Informasi</a>
                         </div>
                     </div>
 
                     <div class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link sub-parent">Publikasi</a>
+                        <a href="javascript:void(0)" class="nav-link-custom sub-parent">Publikasi</a>
 
                         <div class="sub">
-                            <a href="#" class="nav-link">Pengumuman</a>
-                            <a href="#" class="nav-link">Guntingan Berita</a>
-                            <a href="#" class="nav-link">Media Cetak PU</a>
-                            <a href="#" class="nav-link">Glossary</a>
+                            <a href="#" class="nav-link-custom">Pengumuman</a>
+                            <a href="#" class="nav-link-custom">Guntingan Berita</a>
+                            <a href="#" class="nav-link-custom">Media Cetak PU</a>
+                            <a href="#" class="nav-link-custom">Glossary</a>
                         </div>
                     </div>
 
                     <div class="nav-item">
-                        <a href="#" class="nav-link">Kontak</a>
+                        <a href="#" class="nav-link-custom">Kontak</a>
                     </div>
                 </div>
             </div>
@@ -134,35 +142,106 @@
             <div class="hamburger-bar-2"></div>
         </div>
     </nav>
-    
-    <div class="main-content">
-        <div class="bg-image" id="slider-bg"></div>
 
-        <div id="main-content-inner">
-            <div class="dialog">
-                <h1 class="title">Pemerataan Infrastruktur Prasarana Dasar dan Lingkungan</h1>
-                <div class="dialog-content cols-3">
-                    <div class="col-1">
-                        <p>Akses Masyarakat Terhadap prasarana dasar dipenuhi untuk kebutuhan perumahan, air minum, sanitasi, irigasi, dan perlinfungan terhadap bencana dan dampak perubahan iklim.</p>
+    <di id="main-slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <ol class="carousel-indicators slider-bar-container">
+                <li data-target="#main-slider" data-slide-to="0" class="slider-bar active"></li>
+                <li data-target="#main-slider" data-slide-to="1" class="slider-bar "></li>
+                <li data-target="#main-slider" data-slide-to="2" class="slider-bar "></li>
+                <li data-target="#main-slider" data-slide-to="3" class="slider-bar "></li>
+            </ol>
+
+            <div class="carousel-item active">
+                <div class="slider-content">
+                    <div class="bg-image" style="background-image:url('./assets/images/gints-gailis-dn8xoYmzLZg-unsplash.jpg')" id="slider-bg"></div>
+            
+                    <div id="main-content-inner">
+                        <div class="big-dialog">
+                            <p class="dialog-content">Membangun Infrastruktur PUPR <br> menuju <span class="regular-highlight">Indonesia Emas 2045</span></p>
+                        </div>`
                     </div>
-    
-                    <div class="col-2">
-                        <p>Ketersediaan air baku untuk irigasi, perkotaan, dan industri dipenuhi dengan pembangunan waduk dan sistem distribusi air baku.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="bg-image" style="background-image:url('./assets/images/suramadu.jpg')" id="slider-bg"></div>
+
+                    <div id="main-content-inner">
+                        <div class="dialog">
+                            <h1 class="title">Pemerataan Infrastruktur Konektivitas Antar Wilayah</h1>
+                            <div class="dialog-content cols-2">
+                                <div class="elem-1">
+                                    <p>Sistem transportasi untuk mendukung mobilitas penduduk dan distribusi barang antar wilayah.</p>
+                                    <p>Akses perekonomian di Kawasan Timur Indonesia diawali dengan pembangunan kota-kota dan memanfaatkan potensi jalur perdagangan internasional.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-    
-                    <div class="col-3">
-                        <p>Konservasi dan rehabilitasi seperti Daerah Aliran Sungai, Danau, Pantai juga akan didukung oleh pembangunan inftastruktur.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="bg-image" style="background-image:url('./assets/images/silas-baisch-9cdo9r9Fors-unsplash.jpg')" id="slider-bg"></div>
+
+                    <div id="main-content-inner">
+                        <div class="dialog">
+                            <h1 class="title">Pemerataan Infrastruktur Prasarana Perkotaan dan Pedesaan</h1>
+                            <div class="dialog-content cols-2">
+                                <div class="elem-1">
+                                    <h2 class="sub-title">Infrastruktur Perkotaan Ramah Lingkungan</h2>
+                                    <ul>
+                                        <li>Peningkatan Rumah Vertikal</li>
+                                        <li>Rumah Bergerak / Terapung / Underground</li>
+                                        <li>Desain Futuristik dan Minimalis</li>
+                                        <li>Hemat Energi</li>
+                                        <li>Housing System Information</li>
+                                    </ul>
+                                </div>
+
+                                <div class="elem-2">
+                                    <h2 class="sub-title">Infrastruktur Pedesaan</h2>
+
+                                    <ul>
+                                        <li>Penguatan ciri khas budaya lokal / local wisfom</li>
+                                        <li>Peningkatan Aksesibilitas transportasi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="slider-content">
+                    <div class="bg-image" style="background-image:url('./assets/images/dam-4260531_1920.jpg')" id="slider-bg"></div>
+
+                    <div id="main-content-inner">
+                        <div class="dialog">
+                            <h1 class="title">Pemerataan Infrastruktur Prasarana Dasar dan Lingkungan</h1>
+                            <div class="dialog-content cols-3">
+                                <div class="elem-1">
+                                    <p>Akses Masyarakat Terhadap prasarana dasar dipenuhi untuk kebutuhan perumahan, air
+                                        minum, sanitasi, irigasi, dan perlinfungan terhadap bencana dan dampak perubahan
+                                        iklim.</p>
+                                </div>
+
+                                <div class="elem-2">
+                                    <p>Ketersediaan air baku untuk irigasi, perkotaan, dan industri dipenuhi dengan
+                                        pembangunan waduk dan sistem distribusi air baku.</p>
+                                </div>
+
+                                <div class="elem-3">
+                                    <p>Konservasi dan rehabilitasi seperti Daerah Aliran Sungai, Danau, Pantai juga akan
+                                        didukung oleh pembangunan inftastruktur.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="slider" id="slider-bar-container">
-            <div class="slider-bar active"></div>
-            <div class="slider-bar"></div>
-            <div class="slider-bar"></div>
-            <div class="slider-bar"></div>
         </div>
-    </div>
 </body>
+
 </html>

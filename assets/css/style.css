@@ -50,26 +50,22 @@ body nav.main-nav div.nav-item-container div.nav-item {
       flex-shrink: 0;
 }
 
-body nav.main-nav div.nav-item-container div.nav-item a.nav-link {
+body nav.main-nav div.nav-item-container div.nav-item a.nav-link-custom {
   display: block;
   line-height: 70px;
-  color: #000;
+  color: #6e6e6e;
   text-decoration: none;
   padding-right: 30px;
   font-size: 18px;
 }
 
-body nav.main-nav div.nav-item-container div.nav-item a.nav-link:hover {
-  color: #3b3b3b;
+body nav.main-nav div.nav-item-container div.nav-item a.nav-link-custom:hover {
+  color: #000;
 }
 
-body nav.main-nav div.nav-item-container div.nav-item a.nav-link.active {
-  background-color: #FFC928;
-  -webkit-clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
-          clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
-  padding: 0 46px;
+body nav.main-nav div.nav-item-container div.nav-item a.nav-link-custom.active {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 
 body nav.main-nav div.hamburger {
@@ -163,7 +159,7 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner {
   overflow-y: auto;
 }
 
-body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link {
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom {
   padding: 0 40px 0 66px;
   display: block;
   line-height: 40px;
@@ -174,11 +170,11 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   font-weight: 500;
 }
 
-body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link.active, body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link:hover {
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom.active, body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom:hover {
   background-color: #FFC928;
 }
 
-body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link.sub-parent::before {
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom.sub-parent::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-style: normal;
@@ -190,7 +186,7 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   left: 34px;
 }
 
-body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link.sub-parent.open-sub::before {
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom.sub-parent.open-sub::before {
   content: "\f054";
 }
 
@@ -211,14 +207,14 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   opacity: 1;
 }
 
-body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link {
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link-custom {
   color: #000;
   line-height: 36px;
   font-size: 14px;
   padding: 0 30px;
 }
 
-body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link.active, body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link:hover {
+body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link-custom.active, body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link-custom:hover {
   background-color: #FFC928;
 }
 
@@ -232,7 +228,34 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   top: 0;
 }
 
-body div.main-content {
+body .slider-bar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px !important;
+  position: absolute;
+  bottom: 24px;
+  margin: 0 auto;
+}
+
+body .slider-bar-container .slider-bar {
+  height: 6px;
+  background-color: rgba(155, 155, 155, 0.49);
+  width: 100%;
+  margin: 0 4px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in !important;
+  transition: all .5s ease-in !important;
+}
+
+body .slider-bar-container .slider-bar.active {
+  background-color: rgba(255, 201, 40, 0.72);
+  width: 142px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body div.slider-content {
   height: calc(100vh - 70px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,7 +274,7 @@ body div.main-content {
   min-height: 538px;
 }
 
-body div.main-content div.bg-image {
+body div.slider-content div.bg-image {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -263,15 +286,15 @@ body div.main-content div.bg-image {
   z-index: -1;
 }
 
-body div.main-content div.bg-image.fade {
+body div.slider-content div.bg-image.fade {
   opacity: 0;
 }
 
-body div.main-content div.big-dialog, body div.main-content div.dialog {
+body div.slider-content div.big-dialog, body div.slider-content div.dialog {
   max-width: 1054px;
 }
 
-body div.main-content div.big-dialog {
+body div.slider-content div.big-dialog {
   text-align: center;
   position: relative;
   display: -webkit-box;
@@ -283,18 +306,18 @@ body div.main-content div.big-dialog {
           flex-direction: column;
 }
 
-body div.main-content div.big-dialog p.dialog-content {
+body div.slider-content div.big-dialog p.dialog-content {
   margin: 0;
   font-weight: 500;
   font-size: 48px;
   color: #fff;
 }
 
-body div.main-content div.big-dialog p.dialog-content span.regular-highlight {
+body div.slider-content div.big-dialog p.dialog-content span.regular-highlight {
   color: #FFC928;
 }
 
-body div.main-content div.big-dialog::before, body div.main-content div.big-dialog::after {
+body div.slider-content div.big-dialog::before, body div.slider-content div.big-dialog::after {
   content: "";
   display: block;
   width: 150px;
@@ -304,28 +327,29 @@ body div.main-content div.big-dialog::before, body div.main-content div.big-dial
           clip-path: polygon(30px 0%, 100% 0%, calc(100% - 30px) 100%, 0% 100%);
 }
 
-body div.main-content div.big-dialog::before {
+body div.slider-content div.big-dialog::before {
   margin-left: auto;
   margin-bottom: 16px;
 }
 
-body div.main-content div.big-dialog::after {
+body div.slider-content div.big-dialog::after {
   margin-top: 16px;
 }
 
-body div.main-content div.dialog h1.title {
+body div.slider-content div.dialog h1.title {
   font-size: 48px;
   font-weight: 500;
   line-height: 59px;
   color: #FFC928;
+  margin: 20px 0;
 }
 
-body div.main-content div.dialog div.dialog-content {
+body div.slider-content div.dialog div.dialog-content {
   color: #fff;
   font-size: 18px;
 }
 
-body div.main-content div.dialog div.dialog-content.cols-2 {
+body div.slider-content div.dialog div.dialog-content.cols-2 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (calc(50% - 10px))[2];
@@ -333,7 +357,7 @@ body div.main-content div.dialog div.dialog-content.cols-2 {
   grid-column-gap: 20px;
 }
 
-body div.main-content div.dialog div.dialog-content.cols-3 {
+body div.slider-content div.dialog div.dialog-content.cols-3 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (calc(calc(100% / 3) - calc(40px / 3)))[3];
@@ -341,41 +365,17 @@ body div.main-content div.dialog div.dialog-content.cols-3 {
   grid-column-gap: 20px;
 }
 
-body div.main-content div.dialog div.dialog-content h2.sub-title {
+body div.slider-content div.dialog div.dialog-content h2.sub-title {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
 }
 
-body div.main-content div.dialog div.dialog-content ul {
+body div.slider-content div.dialog div.dialog-content ul {
   padding-left: 18px;
 }
 
-body div.main-content div.dialog div.dialog-content ul li {
+body div.slider-content div.dialog div.dialog-content ul li {
   line-height: 28px;
-}
-
-body div.main-content div.slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 400px;
-  position: absolute;
-  bottom: 50px;
-}
-
-body div.main-content div.slider div.slider-bar {
-  height: 6px;
-  background-color: rgba(155, 155, 155, 0.49);
-  width: 100%;
-  margin: 0 4px;
-  cursor: pointer;
-}
-
-body div.main-content div.slider div.slider-bar.active {
-  background-color: rgba(255, 201, 40, 0.72);
-  width: 142px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 /*# sourceMappingURL=style.css.map */
