@@ -11,7 +11,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/style2.css">
+    <!-- <link rel="stylesheet" href="./assets/css/style2.css"> -->
 
     <!-- jQuery -->
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
@@ -147,147 +147,161 @@
     </nav>
     <main>
         <div class="jumbotron jumbotron-fluid mb-0">
-            <div class="container">
-                <div class="judul-hidden">
+            <div class="berita-container">
+                <div class="judul-top hidden">
                     <h1>Berita PUPR</h1>
                     <p>Kabar Harian Seputar PUPR</p>
                 </div>
-                <div class="container scroll d-flex justify-content-around">
-                    <div class="judul">
-                        <h1>Berita <span class="regular-highlight">PUPR</span></h1>
-                        <p>Kabar Harian Seputar Kementrian PUPR</p>
+                <div class="container scroll">
+                    <div class="scroll-inner d-flex">
+                        <div class="judul">
+                            <h1>Berita <span class="regular-highlight">PUPR</span></h1>
+                            <p>Kabar Harian Seputar Kementrian PUPR</p>
+                        </div>
+                        <div class="index first d-flex flex-column align-items-end">
+                            <div class="card berita-populer pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 521px" ;>
+                                <div class="left">
+                                    <div class="kategori mt-2">
+                                        <p>Berita Populer</p>
+                                    </div>
+                                    <div class="content">
+                                        <h2>Tarif Tol Gempol-Pandaan dan Pandaan-Malang Akan Diberlakukan 9 Agustus 2019</h2>
+                                        <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
+                                        <p class="maincontent">
+                                            Malang – Tarif Jalan Tol Gempol-Pandaan ruas Pandaan IC-Pandaan sepanjang 1,5 km
+                                            dan Jalan Tol Pandaan-Malang Seksi III (Pandaan-Singosari) sepanjang 30,6 km
+                                            akan diberlakukan ...
+                                        </p>
+                                    </div>
+                                    <div class="cta">
+                                        <a href="">Baca Selengkapnya</a>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/gerbang tol pandaan-malang.jpeg"
+                                    alt="Card image cap" style="width: 215px;height: 100%;">
+                            </div>
+    
+                            <div class="card populer bg-warning mt-4 d-flex justify-content-center"
+                                style="width: 479.51px;height: 52px;">
+                                <p class="tag ml-3 mt-3">Tag Populer : <span class="tag">#Lorem #Lorem #Lorem #Lorem</span>
+                                </p>
+                            </div>
+    
+                            <div class="card berita mt-4 pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 433px; height: 165px" ;>
+                                <div class="left">
+                                    <div class="content pt-2">
+                                        <a href="#">
+                                            <h2>Sekjen PUPR : Politeknik PU Kejar Kebutuhan Tenaga Terampil Bidang Konstruksi
+                                            </h2>
+                                        </a>
+                                        <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/sekjen PUPR.jpeg" alt="Card image cap"
+                                    style="width: 178px;height: 100%;">
+                            </div>
+                        </div>
+    
+                        <div class="index">
+                            <div class="card berita ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 433px; height: 165px" ;>
+                                <div class="left">
+                                    <div class="content pt-2">
+                                        <a href="#">
+                                            <h2>Sekjen PUPR : Politeknik PU Kejar Kebutuhan Tenaga Terampil Bidang Konstruksi
+                                            </h2>
+                                        </a>
+                                        <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/sekjen PUPR.jpeg" alt="Card image cap"
+                                    style="width: 197px;height: 100%;">
+                            </div>
+    
+    
+                            <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 433px; height: 165px" ;>
+                                <div class="left">
+                                    <div class="content pt-2">
+                                        <a href="#">
+                                            <h2>Menteri Basuki : ASN Kementerian PUPR Harus Tinggalkan Zona Nyaman
+                                            </h2>
+                                        </a>
+                                        <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/menteri basuki.jpeg" alt="Card image cap"
+                                    style="width: 197px;height: 100%;">
+                            </div>
+    
+                            <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 433px; height: 165px" ;>
+                                <div class="left">
+                                    <div class="content pt-2">
+                                        <a href="#">
+                                            <h2>Pelatihan Bela Negara CPNS Kementerian PUPR Pupuk Kebersamaan Dalam Bekerja
+                                            </h2>
+                                        </a>
+                                        <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/pelatihan.jpg" alt="Card image cap"
+                                    style="width: 197px;height: 100%;">
+                            </div>
+    
+                        </div>
+    
+                        <div class="index">
+                            <div class="card berita ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 433px; height: 165px" ;>
+                                <div class="left">
+                                    <div class="content pt-2">
+                                        <a href="#">
+                                            <h2>Sekjen PUPR : Politeknik PU Kejar Kebutuhan Tenaga Terampil Bidang Konstruksi
+                                            </h2>
+                                        </a>
+                                        <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/sekjen PUPR.jpeg" alt="Card image cap"
+                                    style="width: 197px;height: 100%;">
+                            </div>
+    
+    
+                            <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 433px; height: 165px" ;>
+                                <div class="left">
+                                    <div class="content pt-2">
+                                        <a href="#">
+                                            <h2>Menteri Basuki : ASN Kementerian PUPR Harus Tinggalkan Zona Nyaman
+                                            </h2>
+                                        </a>
+                                        <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/menteri basuki.jpeg" alt="Card image cap"
+                                    style="width: 197px;height: 100%;">
+                            </div>
+    
+                            <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
+                                style="width: 433px; height: 165px" ;>
+                                <div class="left">
+                                    <div class="content pt-2">
+                                        <a href="#">
+                                            <h2>Pelatihan Bela Negara CPNS Kementerian PUPR Pupuk Kebersamaan Dalam Bekerja
+                                            </h2>
+                                        </a>
+                                        <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
+                                    </div>
+                                </div>
+                                <img class="card-img" src="./assets/images/pelatihan.jpg" alt="Card image cap"
+                                    style="width: 197px;height: 100%;">
+                            </div>
+    
+                        </div>
                     </div>
-                    <div class="index">
-                        <div class=" card berita-populer pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 521px" ;>
-                            <div class="left">
-                                <div class="kategori mt-2">
-                                    <p>Berita Populer</p>
-                                </div>
-                                <div class="content">
-                                    <h2>Tarif Tol Gempol-Pandaan dan Pandaan-Malang Akan Diberlakukan 9 Agustus 2019
-                                        git i </h2>
-                                    <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
-                                    <p class="maincontent">
-                                        Malang – Tarif Jalan Tol Gempol-Pandaan ruas Pandaan IC-Pandaan sepanjang 1,5 km
-                                        dan Jalan Tol Pandaan-Malang Seksi III (Pandaan-Singosari) sepanjang 30,6 km
-                                        akan diberlakukan ...
-                                    </p>
-                                </div>
-                                <div class="cta">
-                                    <a href="">Baca Selengkapnya</a>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/gerbang tol pandaan-malang.jpeg"
-                                alt="Card image cap" style="width: 215px;height: 100%;">
-                        </div>
-
-                        <div class=" card populer bg-warning mt-4 d-flex justify-content-center"
-                            style="width: 479.51px;height: 52px;">
-                            <p class="tag ml-3 mt-3">Tag Populer : <span class="tag">#Lorem #Lorem #Lorem #Lorem</span>
-                            </p>
-                        </div>
-
-                        <div class="card berita mt-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 433px; height: 165px" ;>
-                            <div class="left">
-                                <div class="content pt-2">
-                                    <h2>Sekjen PUPR : Politeknik PU Kejar Kebutuhan Tenaga Terampil Bidang Konstruksi
-                                    </h2>
-                                    <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/sekjen PUPR.png" alt="Card image cap"
-                                style="width: 178px;height: 100%;">
-                        </div>
-                    </div>
-
-                    <div class="index">
-                        <div class="card berita ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 433px; height: 165px" ;>
-                            <div class="left">
-                                <div class="content pt-2">
-                                    <h2>Sekjen PUPR : Politeknik PU Kejar Kebutuhan Tenaga Terampil Bidang Konstruksi
-                                    </h2>
-                                    <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/sekjen PUPR.png" alt="Card image cap"
-                                style="width: 197px;height: 100%;">
-                        </div>
-
-
-                        <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 433px; height: 165px" ;>
-                            <div class="left">
-                                <div class="content pt-2">
-                                    <h2>Menteri Basuki : ASN Kementerian PUPR Harus Tinggalkan Zona Nyaman
-                                    </h2>
-                                    <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/menteri basuki.jpeg" alt="Card image cap"
-                                style="width: 197px;height: 100%;">
-                        </div>
-
-                        <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 433px; height: 165px" ;>
-                            <div class="left">
-                                <div class="content pt-2">
-                                    <h2>Pelatihan Bela Negara CPNS Kementerian PUPR Pupuk Kebersamaan Dalam Bekerja
-                                    </h2>
-                                    <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/pelatihan.jpg" alt="Card image cap"
-                                style="width: 197px;height: 100%;">
-                        </div>
-
-                    </div>
-
-                    <div class="index">
-                        <div class="card berita ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 433px; height: 165px" ;>
-                            <div class="left">
-                                <div class="content pt-2">
-                                    <h2>Sekjen PUPR : Politeknik PU Kejar Kebutuhan Tenaga Terampil Bidang Konstruksi
-                                    </h2>
-                                    <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/sekjen PUPR.png" alt="Card image cap"
-                                style="width: 197px;height: 100%;">
-                        </div>
-
-
-                        <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 433px; height: 165px" ;>
-                            <div class="left">
-                                <div class="content pt-2">
-                                    <h2>Menteri Basuki : ASN Kementerian PUPR Harus Tinggalkan Zona Nyaman
-                                    </h2>
-                                    <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/menteri basuki.jpeg" alt="Card image cap"
-                                style="width: 197px;height: 100%;">
-                        </div>
-
-                        <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                            style="width: 433px; height: 165px" ;>
-                            <div class="left">
-                                <div class="content pt-2">
-                                    <h2>Pelatihan Bela Negara CPNS Kementerian PUPR Pupuk Kebersamaan Dalam Bekerja
-                                    </h2>
-                                    <p class="tagline">Selasa, 6 Agustus 2019 | 5 Mins Read</p>
-                                </div>
-                            </div>
-                            <img class="card-img" src="./assets/images/pelatihan.jpg" alt="Card image cap"
-                                style="width: 197px;height: 100%;">
-                        </div>
-
-                    </div>
-                    
                 </div>
             </div>
             <div class="bungkus">
