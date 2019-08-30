@@ -1,0 +1,135 @@
+/* @import url("../fonts/Montserrat/Montserrat.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+} */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron.jumbotron-fluid {
+  height: calc(100vh - 70px);
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.blur {
+  background-image: url("../images/gints-gailis-dn8xoYmzLZg-unsplash.jpg");
+  background-size: cover;
+  height: 101%;
+  width: 101%;
+  filter: blur(2px) brightness(60%) hue-rotate(-25deg);
+  position: absolute;
+
+  flex-shrink: 0;
+}
+
+.bungkus {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* .container {
+  height: 50%;
+} */
+.container.scroll{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.container.scroll .index{
+  flex: 0 0 auto;
+}
+.container.scroll .judul {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.container .judul-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container.scroll .judul h1 {
+  color: white;
+  font-size: 48px;
+}
+
+.container.scroll .judul p {
+  color: white;
+  font-size: 14px;
+}
+
+.container.scroll .judul h1 span {
+  color: #FFC928;
+}
+
+.left {
+  width: 50%;
+}
+
+.right .image {
+  background-image: url("../images/gerbang tol pandaan-malang.jpeg");
+}
+
+.kategori p {
+  font-size: 14px;
+}
+
+.content h2 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #163A70;
+}
+
+.tagline {
+  font-size: 10px;
+  line-height: 12px;
+  color: #6A6A6A;
+}
+
+.maincontent {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.cta a::after {
+  background-image: url("/assets/icons/arrow right.png")
+}
+
+.tag {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #163A70;
+}
+
+span.tag {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6D6D6D;
+
+}
