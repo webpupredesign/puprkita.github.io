@@ -1041,4 +1041,28 @@ body main.main-content section.galeri-video .video-container .video-items .video
   font-size: 12px;
   line-height: 30px;
 }
+
+/* css manual */
+.galeri-foto{
+  padding: 30px 40px;
+}
+.foto-tag{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+ul.foto{
+  margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow-x: auto;
+}
+
+ul.foto li{
+  display: inline;
+  width: 100px;
+  height: 150px;
+}
 /*# sourceMappingURL=style.css.map */
