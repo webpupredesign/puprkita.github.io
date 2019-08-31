@@ -12,6 +12,10 @@
     @media screen and (max-width: 570px) {@content;}
 }
 
+@mixin for-desktop {
+    @media screen and (min-width: 1025px) {@content;}
+}
+
 * {
     box-sizing: border-box;
     transition: all 0.3s ease-in;
@@ -1223,6 +1227,10 @@ body {
     }
 
     footer.footer {
+        @include for-desktop {
+            display: none !important;
+        }
+
         .container {
             @include for-phone {
                 flex-direction: column;

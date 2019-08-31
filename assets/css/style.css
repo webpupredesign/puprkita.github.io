@@ -1339,6 +1339,12 @@ body main.main-content section.galeri-foto ul.foto li {
       flex-shrink: 0;
 }
 
+@media screen and (min-width: 1025px) {
+  body footer.footer {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 570px) {
   body footer.footer .container {
     -webkit-box-orient: vertical;
