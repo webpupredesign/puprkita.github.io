@@ -39,6 +39,22 @@ body nav.main-nav div.nav-logo img {
   height: 48px;
 }
 
+body nav.main-nav div.nav-logo img.mobile-logo {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  body nav.main-nav div.nav-logo img.mobile-logo {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body nav.main-nav div.nav-logo img.logo-image {
+    display: none;
+  }
+}
+
 body nav.main-nav div.nav-item-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,6 +206,18 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   content: "\f054";
 }
 
+@media screen and (max-width: 1024px) {
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom.sub-parent::before {
+    content: "\f078";
+  }
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom.sub-parent.open-sub {
+    background-color: #FFC928;
+  }
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item a.nav-link-custom.sub-parent.open-sub::before {
+    content: "\f077";
+  }
+}
+
 body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub {
   position: absolute;
   min-width: 290px;
@@ -200,6 +228,25 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   visibility: hidden;
   opacity: 0;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub {
+    position: relative;
+    top: unset;
+    right: unset;
+    background-color: #F7F7F7;
+    padding: 0;
+    height: 0;
+    -webkit-transition: none;
+    transition: none;
+  }
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub.show-sub {
+    height: auto;
+  }
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link-custom {
+    padding-left: 60px !important;
+  }
 }
 
 body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub.show-sub {
@@ -214,6 +261,14 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   padding: 0 30px;
 }
 
+@media screen and (max-width: 1024px) {
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link-custom {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
 body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link-custom.active, body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub a.nav-link-custom:hover {
   background-color: #FFC928;
 }
@@ -226,6 +281,12 @@ body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-
   position: absolute;
   right: -24px;
   top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  body nav.main-nav div.nav-drawer-outer div.nav-drawer .nav-drawer-inner div.nav-item div.sub::before {
+    display: none;
+  }
 }
 
 body .slider-bar-container {
@@ -288,6 +349,10 @@ body div.slider-content div.bg-image {
 
 body div.slider-content div.bg-image.fade {
   opacity: 0;
+}
+
+body div.slider-content #main-content-inner {
+  padding: 0 40px;
 }
 
 body div.slider-content div.big-dialog, body div.slider-content div.dialog {
@@ -448,53 +513,13 @@ body .jumbotron.jumbotron-fluid .berita-container .judul-top-container .judul-to
 }
 
 body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form {
-  position: relative;
-  width: 384px;
   margin-left: auto;
-}
-
-body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text] {
-  background-color: #fff;
-  width: 100%;
-  line-height: 40px;
-  padding: 0 89px 0 20px;
-  border: 0;
-}
-
-body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]::-webkit-input-placeholder {
-  font-size: 14px;
-  color: #969696;
-  opacity: 1;
-}
-
-body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]:-ms-input-placeholder {
-  font-size: 14px;
-  color: #969696;
-  opacity: 1;
-}
-
-body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]::-ms-input-placeholder {
-  font-size: 14px;
-  color: #969696;
-  opacity: 1;
-}
-
-body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]::placeholder {
-  font-size: 14px;
-  color: #969696;
-  opacity: 1;
 }
 
 body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form button {
   position: absolute;
-  line-height: 40px;
-  padding: 0 10px;
   top: 0;
   right: 0;
-  border: 0;
-  font-size: 14px;
-  background-color: #163A70;
-  color: #fff;
 }
 
 body .jumbotron.jumbotron-fluid .berita-container .container.scroll {
@@ -620,5 +645,400 @@ body .jumbotron.jumbotron-fluid .berita-container .container.scroll .scroll-inne
 body .jumbotron.jumbotron-fluid .berita-container .container.scroll .scroll-inner .judul p {
   color: white;
   font-size: 14px;
+}
+
+body form.search-form {
+  position: relative;
+  width: 384px;
+}
+
+body form.search-form input[type=text] {
+  background-color: #fff;
+  width: 100%;
+  line-height: 40px;
+  padding: 0 89px 0 20px;
+  border: 0;
+}
+
+body form.search-form input[type=text]::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body form.search-form input[type=text]:-ms-input-placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body form.search-form input[type=text]::-ms-input-placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body form.search-form input[type=text]::placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body form.search-form button {
+  position: absolute;
+  line-height: 40px;
+  padding: 0 10px;
+  top: 0;
+  right: 0;
+  border: 0;
+  font-size: 14px;
+  background-color: #163A70;
+  color: #fff;
+}
+
+body main.main-berita {
+  overflow: hidden;
+}
+
+body main.main-berita div.berita-inner {
+  padding: 46px 40px 21px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 1028px;
+}
+
+body main.main-berita div.berita-inner .breadcrumbs {
+  line-height: 40px;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body main.main-berita div.berita-inner .breadcrumbs span {
+  color: rgba(22, 58, 112, 0.69);
+}
+
+body main.main-berita div.berita-inner .breadcrumbs span.current {
+  color: #000;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+body main.main-berita div.berita-inner .timestamp {
+  font-size: 12px;
+  line-height: 40px;
+  color: rgba(22, 58, 112, 0.69);
+}
+
+body main.main-berita div.berita-inner article.berita-content {
+  height: calc(100vh - 400px);
+  position: relative;
+}
+
+body main.main-berita div.berita-inner article.berita-content .berita-image {
+  width: 368px;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: center center/cover url("");
+}
+
+body main.main-berita div.berita-inner article.berita-content .berita-text {
+  width: auto;
+  margin-left: 70px;
+  height: 100%;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 30px;
+  padding-right: 6px;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+  scrollbar-width: thin;
+}
+
+body main.main-berita div.berita-inner article.berita-content .berita-text span.city {
+  font-weight: 600;
+}
+
+body main.main-berita .social-media {
+  position: fixed;
+  top: calc(50% - 90px);
+  right: 0;
+  font-size: 32px;
+}
+
+body main.main-berita .social-media a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 68px;
+  color: #fff;
+}
+
+body main.main-berita .social-media a.facebook {
+  background-color: #163A70;
+}
+
+body main.main-berita .social-media a.instagram {
+  background-color: #FC5199;
+}
+
+body main.main-berita .social-media a.twitter {
+  background-color: #1da1f2;
+}
+
+body .berita-terkini-cards .berita-terkini-judul {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 20px 0;
+}
+
+body .berita-terkini-cards .card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc(25% - 15px))[4];
+      grid-template-columns: repeat(4, calc(25% - 15px));
+  grid-column-gap: 20px;
+  -ms-grid-rows: 100px;
+      grid-template-rows: 100px;
+}
+
+body .berita-terkini-cards .card-container .berita-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+}
+
+body .berita-terkini-cards .card-container .berita-card a.link-judul {
+  font-size: 14px;
+  line-height: 17px;
+  color: #6D6D6D;
+  display: block;
+  padding: 10px;
+  max-height: 64px;
+  overflow: hidden;
+}
+
+body .berita-terkini-cards .card-container .berita-card a.button-baca {
+  display: block;
+  line-height: 29px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #163A70;
+  text-align: center;
+  margin-top: auto;
+}
+
+body main.main-content {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  body main.main-content {
+    display: block;
+  }
+}
+
+body main.main-content a.baca-lengkap {
+  width: 330px;
+  line-height: 48px;
+  text-align: center;
+  background-color: #163A70;
+  font-size: 12px;
+  color: #fff;
+  display: block;
+}
+
+body main.main-content a.massive-btn {
+  display: block;
+  max-width: 690px;
+  line-height: 68px;
+  background-color: #163A70;
+  color: #fff;
+  text-align: center;
+  margin: 20px auto 0;
+}
+
+body main.main-content section.berita-populer {
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+body main.main-content section.berita-populer .berita-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 336px;
+}
+
+body main.main-content section.berita-populer .berita-content .berita-main {
+  margin-right: 20px;
+}
+
+body main.main-content section.berita-populer .berita-content .berita-main .populer-tag {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+  color: #163A70;
+}
+
+body main.main-content section.berita-populer .berita-content .berita-main .berita-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+body main.main-content section.berita-populer .berita-content .berita-main .timestamp {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+body main.main-content section.berita-populer .berita-content .berita-main .berita-text {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 16px 0;
+}
+
+body main.main-content section.berita-populer .berita-content .berita-image {
+  width: 468px;
+  height: 300px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: center/cover url("");
+}
+
+body main.main-content section.berita-populer form.search-form {
+  -webkit-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+  position: absolute !important;
+  bottom: -20px;
+  left: calc(50% - 192px);
+}
+
+body main.main-content section.berita-terkini {
+  padding: 60px 40px 40px;
+  position: relative;
+  background-color: #EDEDED;
+}
+
+body main.main-content section.berita-terkini .berita-terkini-tag {
+  color: #163A70;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+  display: block;
+}
+
+body main.main-content section.berita-terkini div.first-berita {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main.main-content section.berita-terkini div.first-berita .berita-image {
+  width: 315px;
+  height: 367px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: center/cover url("");
+}
+
+body main.main-content section.berita-terkini div.first-berita div.berita-main {
+  margin-left: 20px;
+}
+
+body main.main-content section.berita-terkini div.first-berita div.berita-main .berita-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+body main.main-content section.berita-terkini div.first-berita div.berita-main .timestamp {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+body main.main-content section.berita-terkini div.first-berita div.berita-main .berita-text {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 16px 0;
+}
+
+body main.main-content section.berita-terkini div.berita-terkini-cards {
+  margin-top: 20px;
+}
+
+body main.main-content section.berita-terkini div.berita-terkini-cards .card-container {
+  -ms-grid-rows: 140px;
+      grid-template-rows: 140px;
+}
+
+body main.main-content section.galeri-video {
+  padding: 30px 40px;
+}
+
+body main.main-content section.galeri-video .video-tag {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+body main.main-content section.galeri-video .video-container {
+  max-width: 692px;
+}
+
+body main.main-content section.galeri-video .video-container .video-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+}
+
+body main.main-content section.galeri-video .video-container .video-items .video-thumbnail {
+  width: 190px;
+  height: 141px;
+  background: center/cover url("");
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+body main.main-content section.galeri-video .video-container .video-items .video-content-wrapper {
+  margin-left: 26px;
+}
+
+body main.main-content section.galeri-video .video-container .video-items .video-content-wrapper a h2.video-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+}
+
+body main.main-content section.galeri-video .video-container .video-items .video-content-wrapper .timestamp {
+  font-size: 14px;
+  line-height: 17px;
+  color: #544F4F;
+}
+
+body main.main-content section.galeri-video .video-container .video-items .video-content-wrapper article.berita-text {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 30px;
 }
 /*# sourceMappingURL=style.css.map */

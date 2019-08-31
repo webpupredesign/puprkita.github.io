@@ -1,5 +1,17 @@
 @import url("../fonts/Montserrat/Montserrat.css");
 
+@mixin for-tablet-landscape {
+    @media screen and (max-width: 1024px) {@content;}
+}
+
+@mixin for-tablet-portrait {
+    @media screen and (max-width: 768px) {@content;}
+}
+
+@mixin for-phone {
+    @media screen and (max-width: 380px) {@content;}
+}
+
 * {
     box-sizing: border-box;
     transition: all 0.3s ease-in;
@@ -26,6 +38,20 @@ body {
 
             img {
                 height: 48px;
+
+                &.mobile-logo {
+                    display: none;
+
+                    @include for-tablet-landscape {
+                        display: block;
+                    }
+                }
+
+                &.logo-image {
+                    @include for-tablet-landscape {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -164,6 +190,20 @@ body {
                             &.sub-parent.open-sub::before {
                                 content: "\f054";
                             }
+
+                            @include for-tablet-landscape {
+                                &.sub-parent::before {
+                                    content: "\f078";
+                                }
+
+                                &.sub-parent.open-sub {
+                                    background-color: #FFC928;
+
+                                    &::before {
+                                        content: "\f077";
+                                    }
+                                }
+                            }
                         }
     
                         div.sub {
@@ -177,6 +217,24 @@ body {
                             opacity: 0;
                             white-space: nowrap;
 
+                            @include for-tablet-landscape {
+                                position: relative;
+                                top: unset;
+                                right: unset;
+                                background-color: #F7F7F7;
+                                padding: 0;
+                                height: 0;
+                                transition: none;
+
+                                &.show-sub {
+                                    height: auto;
+                                }
+
+                                a.nav-link-custom {
+                                    padding-left: 60px !important;
+                                }
+                            }
+
                             &.show-sub {
                                 visibility: visible;
                                 opacity: 1;
@@ -187,6 +245,12 @@ body {
                                 line-height: 36px;
                                 font-size: 14px;
                                 padding: 0 30px;
+
+                                @include for-tablet-landscape {
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
     
                                 &.active, &:hover {
                                     background-color: #FFC928;
@@ -201,6 +265,10 @@ body {
                                 position: absolute;
                                 right: -24px;
                                 top: 0;
+
+                                @include for-tablet-landscape {
+                                    display: none;
+                                }
                             }
                         }
                     }
@@ -254,6 +322,10 @@ body {
             &.fade {
                 opacity: 0;
             }
+        }
+
+        #main-content-inner {
+            padding: 0 40px;
         }
 
         div.big-dialog, div.dialog {
@@ -400,34 +472,12 @@ body {
                 }
 
                 form.search-form {
-                    position: relative;
-                    width: 384px;
                     margin-left: auto;
-
-                    input[type=text] {
-                        background-color: #fff;
-                        width: 100%;
-                        line-height: 40px;
-                        padding: 0 89px 0 20px;
-                        border: 0;
-
-                        &::placeholder {
-                            font-size: 14px;
-                            color: #969696;
-                            opacity: 1;
-                        }
-                    }
 
                     button {
                         position: absolute;
-                        line-height: 40px;
-                        padding: 0 10px;
                         top: 0;
                         right: 0;
-                        border: 0;
-                        font-size: 14px;
-                        background-color: #163A70;
-                        color: #fff;
                     }
                 }
             }
@@ -544,6 +594,354 @@ body {
                         p {
                             color: white;
                             font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    form.search-form {
+        position: relative;
+        width: 384px;
+
+        input[type=text] {
+            background-color: #fff;
+            width: 100%;
+            line-height: 40px;
+            padding: 0 89px 0 20px;
+            border: 0;
+
+            &::placeholder {
+                font-size: 14px;
+                color: #969696;
+                opacity: 1;
+            }
+        }
+
+        button {
+            position: absolute;
+            line-height: 40px;
+            padding: 0 10px;
+            top: 0;
+            right: 0;
+            border: 0;
+            font-size: 14px;
+            background-color: #163A70;
+            color: #fff;
+        }
+    }
+
+    main.main-berita {
+        overflow: hidden;
+
+        div.berita-inner {
+            padding: 46px 40px 21px;
+            margin: 0 auto;
+            overflow: hidden;
+            max-width: 1028px;
+
+            .breadcrumbs {
+                line-height: 40px;
+                font-size: 18px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+                span {
+                    color: rgba(22, 58, 112, 0.69);
+
+                    &.current {
+                        color: #000;
+                        font-weight: 500;
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .timestamp {
+                font-size: 12px;
+                line-height: 40px;
+                color: rgba(22, 58, 112, 0.69);
+            }
+
+            article.berita-content {
+                height: calc(100vh - 400px);
+                position: relative;
+
+                .berita-image {
+                    width: 368px;
+                    height: 100%;
+                    flex-shrink: 0;
+                    background: center center / cover url('');
+                }
+
+                .berita-text {
+                    width: auto;
+                    margin-left: 70px;
+                    height: 100%;
+                    overflow-y: auto;
+                    font-size: 14px;
+                    line-height: 30px;
+                    padding-right: 6px;
+                    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+                    scrollbar-width: thin;
+
+                    span.city {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .social-media {
+            position: fixed;
+            top: calc(50% - 90px);
+            right: 0;
+            font-size: 32px;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 68px;
+                color: #fff;
+
+                &.facebook {
+                    background-color: #163A70;
+                }
+
+                &.instagram {
+                    background-color: #FC5199;
+                }
+
+                &.twitter {
+                    background-color: #1da1f2;
+                }
+            }
+        }
+    }
+
+    .berita-terkini-cards {
+        .berita-terkini-judul {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 20px 0;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, calc(25% - 15px));
+            grid-column-gap: 20px;
+            grid-template-rows: 100px;
+
+            .berita-card {
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+
+                a.link-judul {
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #6D6D6D;
+                    display: block;
+                    padding: 10px;
+                    max-height: 64px;
+                    overflow: hidden;
+                }
+
+                a.button-baca {
+                    display: block;
+                    line-height: 29px;
+                    font-size: 14px;
+                    color: #fff;
+                    background-color: #163A70;
+                    text-align: center;
+                    margin-top: auto;
+                }
+            }
+        }
+    }
+
+    main.main-content {
+        display: none;
+        @include for-tablet-landscape {
+            display: block;
+        }
+
+        a.baca-lengkap {
+            width: 330px;
+            line-height: 48px;
+            text-align: center;
+            background-color: #163A70;
+            font-size: 12px;
+            color: #fff;
+            display: block;
+        }
+
+        a.massive-btn {
+            display: block;
+            max-width: 690px;
+            line-height: 68px;
+            background-color: #163A70;
+            color: #fff;
+            text-align: center;
+            margin: 20px auto 0;
+        }
+
+        section.berita-populer {
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+
+            .berita-content {
+                display: flex;
+                position: relative;
+                min-height: 336px;
+
+                .berita-main {
+                    margin-right: 20px;
+                    .populer-tag {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 40px;
+                        color: #163A70;
+                    }
+
+                    .berita-title {
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 40px;
+                    }
+
+                    .timestamp {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+
+                    .berita-text {
+                        font-size: 14px;
+                        line-height: 30px;
+                        margin: 16px 0;
+                    }
+                }
+
+                .berita-image {
+                    width: 468px;
+                    height: 300px;
+                    flex-shrink: 0;
+                    background: center / cover url('');
+                }
+            }
+
+            form.search-form {
+                box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+                position: absolute !important;
+                bottom: -20px;
+                left: calc(50% - 192px);
+            }
+        }
+
+        section.berita-terkini {
+            padding: 60px 40px 40px;
+            position: relative;
+            background-color: #EDEDED;
+
+            .berita-terkini-tag {
+                color: #163A70;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 40px;
+                display: block;
+            }
+
+            div.first-berita {
+                display: flex;
+
+                .berita-image {
+                    width: 315px;
+                    height: 367px;
+                    flex-shrink: 0;
+                    background: center / cover url('');
+                }
+
+                div.berita-main {
+                    margin-left: 20px;
+
+                    .berita-title {
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 40px;
+                    }
+
+                    .timestamp {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+
+                    .berita-text {
+                        font-size: 14px;
+                        line-height: 30px;
+                        margin: 16px 0;
+                    }
+                }
+            }
+
+            div.berita-terkini-cards {
+                margin-top: 20px;
+
+                .card-container {
+                    grid-template-rows: 140px;
+                }
+            }
+        }
+
+        section.galeri-video {
+            padding: 30px 40px;
+
+            .video-tag {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            .video-container {
+                max-width: 692px;
+
+                .video-items {
+                    display: flex;
+                    margin: 20px 0;
+
+                    .video-thumbnail {
+                        width: 190px;
+                        height: 141px;
+                        background: center / cover url('');
+                        flex-shrink: 0;
+                    }
+
+                    .video-content-wrapper {
+                        margin-left: 26px;
+
+                        a h2.video-title {
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 22px;
+                            color: #000;
+                        }
+        
+                        .timestamp {
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #544F4F;
+                        }
+        
+                        article.berita-text {
+                            margin-top: 10px;
+                            font-size: 12px;
+                            line-height: 30px;
                         }
                     }
                 }
