@@ -369,10 +369,66 @@ body {
         }
 
         .berita-container {
-            .judul-top {
-                &.hidden {
-                    visibility: hidden;
-                    opacity: 0;
+            .judul-top-container {
+                padding: 26px 80px;
+
+                .judul-top {
+                    &.hidden {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+    
+                    h1 {
+                        color: white;
+                        padding: 0;
+                        margin: 0;
+                        font-weight: 500;
+                        font-size: 24px;
+    
+                        span {
+                            color: #FFC928;
+                        }
+                    }
+    
+                    p {
+                        font-weight: 500;
+                        font-size: 13px;
+                        color: white;
+                        padding: 0;
+                        margin: 0 0 0 17px;
+                    }
+                }
+
+                form.search-form {
+                    position: relative;
+                    width: 384px;
+                    margin-left: auto;
+
+                    input[type=text] {
+                        background-color: #fff;
+                        width: 100%;
+                        line-height: 40px;
+                        padding: 0 89px 0 20px;
+                        border: 0;
+
+                        &::placeholder {
+                            font-size: 14px;
+                            color: #969696;
+                            opacity: 1;
+                        }
+                    }
+
+                    button {
+                        position: absolute;
+                        line-height: 40px;
+                        padding: 0 10px;
+                        top: 0;
+                        right: 0;
+                        border: 0;
+                        font-size: 14px;
+                        background-color: #163A70;
+                        color: #fff;
+                    }
                 }
             }
 
@@ -381,6 +437,8 @@ body {
                 overflow-x: auto;
                 max-width: 100%;
                 height: calc(100vh - 166px);
+                scrollbar-color: #ffffff47 transparent;
+                scrollbar-width: thin;
 
                 .scroll-inner {
                     padding: 0 500px 0 40px;
@@ -468,6 +526,11 @@ body {
                         flex-shrink: 0;
                         margin-right: 40px;
                         justify-content: center;
+
+                        &.hidden {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
     
                         h1 {
                             color: white;

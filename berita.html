@@ -23,8 +23,8 @@
     <!-- main-nav.js -->
     <script src="./assets/js/main-nav.js"></script>
 
-    <!-- slider.js -->
-    <!-- <script src="./assets/js/slider.js"></script> -->
+    <!-- berita scroll -->
+    <script src="./assets/js/berita-scroll.js"></script>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
@@ -148,12 +148,19 @@
     <main>
         <div class="jumbotron jumbotron-fluid mb-0">
             <div class="berita-container">
-                <div class="judul-top hidden">
-                    <h1>Berita PUPR</h1>
-                    <p>Kabar Harian Seputar PUPR</p>
+                <div class="judul-top-container d-flex align-items-center">
+                    <div class="judul-top hidden d-flex align-items-center">
+                        <h1>Berita <span class="regular-highlight">PUPR</span></h1>
+                        <p>Kabar Harian Seputar PUPR</p>
+                    </div>
+
+                    <form action="" class="search-form">
+                        <input type="text" name="q" id="q" placeholder="Masukkan kata kunci" required>
+                        <button type="submit"><i class="fas fa-fw fa-search fa-flip-horizontal mr-1"></i> Cari</button>
+                    </form>
                 </div>
-                <div class="container scroll">
-                    <div class="scroll-inner d-flex">
+                <div class="container scroll" id="berita-scroll">
+                    <div class="scroll-inner d-flex" id="scroll-inner">
                         <div class="judul">
                             <h1>Berita <span class="regular-highlight">PUPR</span></h1>
                             <p>Kabar Harian Seputar Kementrian PUPR</p>

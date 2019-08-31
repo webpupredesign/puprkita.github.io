@@ -418,9 +418,83 @@ body .jumbotron.jumbotron-fluid .bungkus .blur {
       flex-shrink: 0;
 }
 
-body .jumbotron.jumbotron-fluid .berita-container .judul-top.hidden {
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container {
+  padding: 26px 80px;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container .judul-top.hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container .judul-top h1 {
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container .judul-top h1 span {
+  color: #FFC928;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container .judul-top p {
+  font-weight: 500;
+  font-size: 13px;
+  color: white;
+  padding: 0;
+  margin: 0 0 0 17px;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form {
+  position: relative;
+  width: 384px;
+  margin-left: auto;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text] {
+  background-color: #fff;
+  width: 100%;
+  line-height: 40px;
+  padding: 0 89px 0 20px;
+  border: 0;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]:-ms-input-placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]::-ms-input-placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form input[type=text]::placeholder {
+  font-size: 14px;
+  color: #969696;
+  opacity: 1;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .judul-top-container form.search-form button {
+  position: absolute;
+  line-height: 40px;
+  padding: 0 10px;
+  top: 0;
+  right: 0;
+  border: 0;
+  font-size: 14px;
+  background-color: #163A70;
+  color: #fff;
 }
 
 body .jumbotron.jumbotron-fluid .berita-container .container.scroll {
@@ -428,6 +502,8 @@ body .jumbotron.jumbotron-fluid .berita-container .container.scroll {
   overflow-x: auto;
   max-width: 100%;
   height: calc(100vh - 166px);
+  scrollbar-color: #ffffff47 transparent;
+  scrollbar-width: thin;
 }
 
 body .jumbotron.jumbotron-fluid .berita-container .container.scroll .scroll-inner {
@@ -525,6 +601,11 @@ body .jumbotron.jumbotron-fluid .berita-container .container.scroll .scroll-inne
       flex-shrink: 0;
   margin-right: 40px;
   justify-content: center;
+}
+
+body .jumbotron.jumbotron-fluid .berita-container .container.scroll .scroll-inner .judul.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 body .jumbotron.jumbotron-fluid .berita-container .container.scroll .scroll-inner .judul h1 {
