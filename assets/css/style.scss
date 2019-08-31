@@ -9,7 +9,7 @@
 }
 
 @mixin for-phone {
-    @media screen and (max-width: 380px) {@content;}
+    @media screen and (max-width: 570px) {@content;}
 }
 
 * {
@@ -57,6 +57,10 @@ body {
 
         div.nav-item-container {
             display: flex;
+
+            @include for-phone {
+                display: none;
+            }
 
             div.nav-item {
                 flex-shrink: 0;
@@ -159,6 +163,14 @@ body {
                     margin-top: 96px;
                     height: calc(100vh - 96px);
                     overflow-y: auto;
+
+                    div.mobile-menu {
+                        display: none;
+                        
+                        @include for-phone {
+                            display: block;
+                        }
+                    }
     
                     div.nav-item {
                         a.nav-link-custom {
@@ -381,6 +393,10 @@ body {
                 color: #fff;
                 font-size: 18px;
 
+                @include for-phone {
+                    display: none !important;
+                }
+
                 &.cols-2 {
                     display: grid;
                     grid-template-columns: repeat(2, calc(50% - 10px));
@@ -416,6 +432,127 @@ body {
         background-color: transparent;
         padding: 0;
         margin: 0;
+
+        @include for-tablet-landscape {
+            height: auto;
+
+            .bungkus {
+                display: none !important;
+            }
+
+            .berita-container {
+                .judul-top-container {
+                    display: none !important;
+                }
+
+                .container.scroll {
+                    height: auto !important;
+
+                    .scroll-inner {
+                        display: block !important;
+                        padding: 0 !important;
+                        width: auto !important;
+
+                        .judul {
+                            display: none !important;
+                        }
+
+                        .index {
+                            background-color: #ededed;
+                            display: flex;
+                            padding: 40px;
+                            
+                            .card {
+                                border: 0;
+                                border-radius: 0;
+                                flex-direction: column-reverse !important;
+                                padding-left: 0 !important;
+                                margin: 0 !important;
+
+                                &:nth-child(2) {
+                                    margin: 0 40px !important
+                                }
+
+                                img.card-img {
+                                    width: 100% !important;
+                                    height: auto;
+                                    border-radius: 0;
+                                }
+
+                                .left {
+                                    width: auto;
+                                    padding: 0 20px;
+                                }
+                            }
+
+                            &.first {
+                                display: block !important;
+                                padding: 0;
+    
+                                .card {
+                                    width: 100% !important;
+                                    border-radius: 0 !important;
+                                    border: 0 !important;
+                                    background-color: #fff !important;
+    
+                                    &.berita-populer {
+                                        padding: 40px !important;
+                                        z-index: 2;
+
+                                        img.card-img {
+                                            max-width: 250px;
+                                        }
+    
+                                        form.search-form {
+                                            display: block !important;
+                                            box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+                                            position: absolute;
+                                            bottom: -20px;
+                                            left: calc(50% - 192px);
+                                        }
+                                    }
+    
+                                    &.populer {
+                                        padding: 70px 40px 40px;
+                                        background: #ededed !important;
+                                        margin: 0 !important;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    div.pagination {
+                        background: #EDEDED;
+                        padding: 0 0 40px;
+                        margin: 0 auto;
+                        display: flex !important;
+
+                        a {
+                            line-height: 35px;
+                            padding: 0 20px;
+                            background-color: #dbdbdb;
+                            color: #000;
+
+                            &.first, &.last {
+                                background-color: #163A70;
+                                color: #fff;
+                            }
+
+                            &.active {
+                                background-color: #FFC928;
+                                color: #fff;
+                            }
+                        }
+
+                        span.ellipsis {
+                            padding: 0 10px;
+                        }
+                    }
+                }
+            }
+        }
 
         .bungkus {
             display: flex;
@@ -490,12 +627,29 @@ body {
                 scrollbar-color: #ffffff47 transparent;
                 scrollbar-width: thin;
 
+                div.pagination {
+                    display: none;
+                }
+
                 .scroll-inner {
                     padding: 0 500px 0 40px;
                     width: min-content;
                     flex-wrap: nowrap;
                     .index{
                         flex: 0 0 auto;
+
+                        &:nth-child(n+1) {
+                            @include for-phone {
+                                flex-direction: column;
+                                padding-top: 0;
+                                padding-bottom: 0;
+
+                                .card {
+                                    width: 100% !important;
+                                    margin: 10px 0 !important;
+                                }
+                            }
+                        }
 
                         .card {
                             height: calc(33% - 10px) !important;
@@ -504,6 +658,14 @@ body {
                         &.first {
                             .card.berita-populer {
                                 height: 58% !important;
+
+                                @include for-phone {
+                                    padding-bottom: 76px !important;
+                                }
+
+                                form.search-form {
+                                    display: none;
+                                }
                             }
 
                             .card.populer {
@@ -648,6 +810,10 @@ body {
                 white-space: nowrap;
                 overflow: hidden;
 
+                @include for-tablet-landscape {
+                    white-space: unset;
+                }
+
                 span {
                     color: rgba(22, 58, 112, 0.69);
 
@@ -669,11 +835,22 @@ body {
                 height: calc(100vh - 400px);
                 position: relative;
 
+                @include for-tablet-landscape {
+                    height: unset;
+                    max-width: 680px;
+                    float: left;
+                    margin-right: 10px;
+                }
+
                 .berita-image {
                     width: 368px;
                     height: 100%;
                     flex-shrink: 0;
                     background: center center / cover url('');
+
+                    @include for-tablet-landscape {
+                        display: none;
+                    }
                 }
 
                 .berita-text {
@@ -687,8 +864,32 @@ body {
                     scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
                     scrollbar-width: thin;
 
+                    @include for-tablet-landscape {
+                        margin-left: 0;
+                    }
+
                     span.city {
                         font-weight: 600;
+                    }
+
+                    img {
+                        display: none;
+
+                        @include for-tablet-landscape {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .berita-terkini-cards {
+                @include for-tablet-landscape {
+                    .card-container {
+                        display: block !important;
+
+                        .berita-card {
+                            margin-bottom: 20px;
+                        }
                     }
                 }
             }
@@ -773,7 +974,7 @@ body {
         }
 
         a.baca-lengkap {
-            width: 330px;
+            max-width: 330px;
             line-height: 48px;
             text-align: center;
             background-color: #163A70;
@@ -802,8 +1003,16 @@ body {
                 position: relative;
                 min-height: 336px;
 
+                @include for-phone {
+                    flex-direction: column-reverse;
+                }
+
                 .berita-main {
                     margin-right: 20px;
+                    @include for-phone {
+                        margin: 0;
+                    }
+
                     .populer-tag {
                         font-weight: 500;
                         font-size: 14px;
@@ -827,6 +1036,10 @@ body {
                         line-height: 30px;
                         margin: 16px 0;
                     }
+
+                    a.baca-lengkap {
+                        margin: 0 auto;
+                    }
                 }
 
                 .berita-image {
@@ -834,6 +1047,12 @@ body {
                     height: 300px;
                     flex-shrink: 0;
                     background: center / cover url('');
+
+                    @include for-phone {
+                        width: 100%;
+                        padding-top: 60%;
+                        height: unset;
+                    }
                 }
             }
 
@@ -861,15 +1080,29 @@ body {
             div.first-berita {
                 display: flex;
 
+                @include for-phone {
+                    flex-direction: column;
+                }
+
                 .berita-image {
                     width: 315px;
                     height: 367px;
                     flex-shrink: 0;
                     background: center / cover url('');
+
+                    @include for-phone {
+                        width: 100%;
+                        padding-top: 60%;
+                        height: unset;
+                    }
                 }
 
                 div.berita-main {
                     margin-left: 20px;
+
+                    @include for-phone {
+                        margin: 0;
+                    }
 
                     .berita-title {
                         font-weight: bold;
@@ -887,6 +1120,12 @@ body {
                         line-height: 30px;
                         margin: 16px 0;
                     }
+
+                    a.baca-lengkap {
+                        @include for-phone {
+                            margin: 0 auto;
+                        }
+                    }
                 }
             }
 
@@ -895,6 +1134,14 @@ body {
 
                 .card-container {
                     grid-template-rows: 140px;
+
+                    @include for-phone {
+                        display: block !important;
+
+                        .berita-card {
+                            margin-bottom: 20px;
+                        }
+                    }
                 }
             }
         }
@@ -945,6 +1192,51 @@ body {
                         }
                     }
                 }
+            }
+        }
+
+        section.galeri-foto {
+            padding: 40px 0;
+
+            .foto-tag {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                padding: 0 40px;
+            }
+
+            ul.foto{
+                margin: 0;
+                padding: 0;
+                white-space: nowrap;
+                width: 100%;
+                overflow-x: auto;
+
+                li{
+                    width: 70%;
+                    margin-right: 3%;
+                    list-style: none;
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+
+    footer.footer {
+        .container {
+            @include for-phone {
+                flex-direction: column;
+    
+                & > section {
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        ul {
+            li {
+                border: 0 !important;
             }
         }
     }

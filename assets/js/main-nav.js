@@ -1,4 +1,9 @@
 $(document).ready(() => {
+    let navItemTop = $(".nav-item-container").children().clone();
+    let elemen = $("<div class='mobile-menu'></div>").append(navItemTop);
+    
+    $("#nav-drawer-inner").prepend(elemen);
+
     $("#hamburger").on("click", event => {
         if ($("#main-nav").hasClass("show-drawer")) {
             $("#main-nav").removeClass("show-drawer");

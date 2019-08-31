@@ -37,6 +37,7 @@
     <nav class="main-nav" id="main-nav">
         <div class="nav-logo">
             <img src="./assets/images/logo.png" alt="PUPR Logo" class="logo-image">
+            <img src="./assets/images/Logo_PU_(RGB).jpg" alt="PUPR Logo" class="mobile-logo">
         </div>
         <div class="nav-item-container">
             <div class="nav-item">
@@ -166,50 +167,41 @@
                             <p>Kabar Harian Seputar Kementrian PUPR</p>
                         </div>
                         <div class="index first d-flex flex-column align-items-end">
-                            <div class="card berita-populer pl-2 d-flex flex-row justify-content-between bg-warning"
-                                style="width: 521px" ;>
-                                <div class="left">
-                                    <div class="kategori mt-2">
-                                        <p>Berita Populer</p>
+                            <div class="card berita-populer pl-2 bg-warning" style="width: 521px" ;>
+                                <div class="wrapper d-flex flex-row justify-content-between ">
+                                    <div class="left">
+                                        <div class="kategori mt-2">
+                                            <p>Berita Populer</p>
+                                        </div>
+                                        <div class="content">
+                                            <a href="view-berita.html">
+                                                <h2>Tarif Tol Gempol-Pandaan dan Pandaan-Malang Akan Diberlakukan 9 Agustus 2019</h2>
+                                            </a>
+                                            <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
+                                            <p class="maincontent">
+                                                Malang – Tarif Jalan Tol Gempol-Pandaan ruas Pandaan IC-Pandaan sepanjang 1,5 km
+                                                dan Jalan Tol Pandaan-Malang Seksi III (Pandaan-Singosari) sepanjang 30,6 km
+                                                akan diberlakukan ...
+                                            </p>
+                                        </div>
+                                        <div class="cta">
+                                            <a href="">Baca Selengkapnya</a>
+                                        </div>
                                     </div>
-                                    <div class="content">
-                                        <a href="view-berita.html">
-                                            <h2>Tarif Tol Gempol-Pandaan dan Pandaan-Malang Akan Diberlakukan 9 Agustus 2019</h2>
-                                        </a>
-                                        <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
-                                        <p class="maincontent">
-                                            Malang – Tarif Jalan Tol Gempol-Pandaan ruas Pandaan IC-Pandaan sepanjang 1,5 km
-                                            dan Jalan Tol Pandaan-Malang Seksi III (Pandaan-Singosari) sepanjang 30,6 km
-                                            akan diberlakukan ...
-                                        </p>
-                                    </div>
-                                    <div class="cta">
-                                        <a href="">Baca Selengkapnya</a>
-                                    </div>
+                                    <img class="card-img" src="./assets/images/gerbang tol pandaan-malang.jpeg"
+                                        alt="Card image cap" style="width: 215px;height: 100%;">
                                 </div>
-                                <img class="card-img" src="./assets/images/gerbang tol pandaan-malang.jpeg"
-                                    alt="Card image cap" style="width: 215px;height: 100%;">
+
+                                <form action="" class="search-form">
+                                    <input type="text" name="q" id="q" placeholder="Masukkan kata kunci" required>
+                                    <button type="submit"><i class="fas fa-fw fa-search fa-flip-horizontal mr-1"></i> Cari</button>
+                                </form>
                             </div>
     
                             <div class="card populer bg-warning mt-4 d-flex justify-content-center"
                                 style="width: 479.51px;height: 52px;">
                                 <p class="tag ml-3 mt-3">Tag Populer : <span class="tag">#Lorem #Lorem #Lorem #Lorem</span>
                                 </p>
-                            </div>
-    
-                            <div class="card berita mt-4 pl-2 d-flex flex-row justify-content-between bg-warning"
-                                style="width: 433px; height: 165px" ;>
-                                <div class="left">
-                                    <div class="content pt-2">
-                                        <a href="view-berita.html">
-                                            <h2>Sekjen PUPR : Politeknik PU Kejar Kebutuhan Tenaga Terampil Bidang Konstruksi
-                                            </h2>
-                                        </a>
-                                        <p class="tagline">Selasa, 13 Agustus 2019 | 5 Mins Read</p>
-                                    </div>
-                                </div>
-                                <img class="card-img" src="./assets/images/sekjen PUPR.jpeg" alt="Card image cap"
-                                    style="width: 178px;height: 100%;">
                             </div>
                         </div>
     
@@ -228,7 +220,6 @@
                                 <img class="card-img" src="./assets/images/sekjen PUPR.jpeg" alt="Card image cap"
                                     style="width: 197px;height: 100%;">
                             </div>
-    
     
                             <div class="card berita mt-4 ml-4 pl-2 d-flex flex-row justify-content-between bg-warning"
                                 style="width: 433px; height: 165px" ;>
@@ -311,6 +302,18 @@
     
                         </div>
                     </div>
+
+                    <div class="pagination justify-content-center">
+                        <a href="" class="first">Awal</a>
+                        <a href="" class="number active">1</a>
+                        <a href="" class="number">2</a>
+                        <a href="" class="number">3</a>
+                        <a href="" class="number">4</a>
+                        <a href="" class="number">5</a>
+                        <span class="ellipsis">...</span>
+                        <a href="" class="number">50</a>
+                        <a href="" class="last">Akhir</a>
+                    </div>
                 </div>
             </div>
             <div class="bungkus">
@@ -319,6 +322,60 @@
             </div>
         </div>
     </main>
+
+    <footer class="footer bg-warning p-5">
+        <div class="container d-flex">
+            <section class="situs col-3">
+                <h3 class="">Situs Terkait</h3>
+                <ul class="situs list-group list-group-flush">
+                    <li class="list-group-item bg-transparent"><a href="">ULP Kementrian PUPR</a> </li>
+                    <li class="list-group-item bg-transparent"><a href="">Kementrian</a> </li>
+                    <li class="list-group-item bg-transparent"><a href="">Setingkat Menteri</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">LPNK</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">Pemerintah Daerah</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">Badan Usaha Milik Negara</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">Instansi Terkait</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">Asosiasi</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">PU internasional</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">Sekretariat Nasional ASEAN</a></li>
+                    <li class="list-group-item bg-transparent"><a href="">Info terkait</a></li>
+                </ul>
+            </section>
+            <section class="aplikasi col-3">
+                    <h3 class="">Aplikasi PUPR</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"><a href="">E-Monitoring</a> </li>
+                        <li class="list-group-item bg-transparent"><a href="">E-Budgeting</a> </li>
+                        <li class="list-group-item bg-transparent"><a href="">DAK</a></li>
+                        <li class="list-group-item bg-transparent"><a href="">TNDE</a></li>
+                        <li class="list-group-item bg-transparent"><a href="">E-Dokumen</a></li>
+                        <li class="list-group-item bg-transparent"><a href="">Mail PU</a></li>
+                        <li class="list-group-item bg-transparent"><a href="">SI-MENTOR</a></li>
+                    </ul>
+            </section>
+            <section class="kontak col-3">
+                    <h3 class="">Kontak Kami</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent">Jl. Pattimura No. 20
+                                Kebayoran Baru
+                                Jakarta Selatan 12110</li>
+                        <li class="list-group-item bg-transparent">(021)7228497</li>
+                        <li class="list-group-item bg-transparent">informasi@pu.go.id</li>
+                    </ul>
+            </section>
+            <section class="kontak col-3">
+                    <h3 class="">Navigation</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"><a href="">FAQ</a></li>
+                        <li class="list-group-item bg-transparent"><a href="">Sitemap</a></li>
+                    </ul>
+            </section>
+        </div>
+        <br>
+        <div class="cap d-flex justify-content-center align-content-end">
+            <caption>Hak Cipta © 2018 Kementerian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia. All Rights Reserved</caption>
+        </div>
+    </footer>
 </body>
 
 </html>
